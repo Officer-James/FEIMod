@@ -1,0 +1,64 @@
+# This file will automatically update with entries for new content after a build and reload
+
+Mods: {
+	FEI: {
+		Items: {
+			test: {
+				Tooltip: "[c/32FF82:114514!]"
+				DisplayName: "114514"
+			}
+
+			PureDiamond: {
+				DisplayName: Pure Diamond
+				Tooltip:
+					'''
+					Created by the purest diamonds.
+					[c/E11919:It was used by Steve]
+					'''
+			}
+
+			pdSword: {
+				DisplayName: Sword of Pure Diamond
+				Tooltip: It's not end yet...
+			}
+
+			stick: {
+				DisplayName: Stick
+				Tooltip: Just a stick :)
+			}
+
+			pdPickaxe: {
+				DisplayName: Pickaxe of Pure Diamond
+				Tooltip: It's not end yet...
+			}
+
+			pdAxe: {
+				DisplayName: Axe of Pure Diamond
+				Tooltip: It's not end yet...
+			}
+
+			pdMao: {
+				DisplayName: Spear of Jewels
+				Tooltip: You fell the strength of jewels in your hand./n[c/FF1919:---Developer's Item---]
+			}
+
+			pdShotGun: {
+				DisplayName: Shot Gun of Pure Diamond
+				Tooltip: Shot 5 bullets of fire
+			}
+
+			iKun: {
+				DisplayName: iKun
+				Tooltip: Summon KunKun(AKA XuKun Cai)
+			}
+		}
+
+		Projectiles: {
+			GemMao.DisplayName: Mao of Jewels
+			FireBullet.DisplayName: Fire Bullet
+			Basketball.DisplayName: Basketball
+		}
+
+		NPCs.Kun.DisplayName: Kun
+	}
+}

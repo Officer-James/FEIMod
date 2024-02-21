@@ -1,0 +1,5 @@
+displayName = FEI
+author = sh1nebee
+version = 0.2.5
+hideCode = true
+hideResources = true

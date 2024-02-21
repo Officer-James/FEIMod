@@ -1,0 +1,69 @@
+# This file will automatically update with entries for new content after a build and reload
+
+Mods: {
+	FEI: {
+		Items: {
+			test: {
+				Tooltip: "[c/32FF82:114514!]"
+				DisplayName: 野兽仙贝
+			}
+
+			PureDiamond: {
+				DisplayName: 纯钻
+				Tooltip:
+					'''
+					由最纯净的钻石打造而成.
+					[c/E11919:它曾被史蒂夫使用]
+					'''
+			}
+
+			pdSword: {
+				DisplayName: 纯钻之剑
+				Tooltip: 这似乎并不是终点...
+			}
+
+			stick: {
+				DisplayName: 木棍
+				Tooltip: 可以逝世把这玩意捅进好基友的[c/E11919:菊花]中
+			}
+
+			pdPickaxe: {
+				DisplayName: 纯钻之稿
+				Tooltip: 这似乎并不是终点...
+			}
+
+			pdAxe: {
+				DisplayName: 纯钻之斧
+				Tooltip: 这似乎并不是终点...
+			}
+
+			pdMao: {
+				DisplayName: 宝石之矛
+				Tooltip:
+					'''
+					使用时发射出3个追踪敌人的宝石弹幕
+					你感到手中充满了宝石的力量
+					[c/FF1919:---开发者物品---]
+					'''
+			}
+
+			pdShotGun: {
+				DisplayName: 纯钻霰弹枪
+				Tooltip: 一次可发射5发子弹
+			}
+
+			iKun: {
+				DisplayName: 我是iKun
+				Tooltip: 召唤我家鸽鸽
+			}
+		}
+
+		Projectiles: {
+			GemMao.DisplayName: 宝石之矛
+			FireBullet.DisplayName: 火子弹
+			Basketball.DisplayName: 坤坤篮球
+		}
+
+		NPCs.Kun.DisplayName: 坤坤
+	}
+}
