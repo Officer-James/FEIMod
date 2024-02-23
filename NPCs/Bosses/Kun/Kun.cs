@@ -15,7 +15,7 @@ namespace FEI.NPCs.Bosses.Kun
             NPC.width = 150;
             NPC.height = 240;
             NPC.boss = true;
-            //Music = MusicLoader.GetMusicSlot("FEI/Sounds/Music/bosskun");
+            Music = MusicLoader.GetMusicSlot("FEI/Sounds/Music/bosskun");
             NPC.lifeMax = 2500;
             NPC.defense = 10;
             NPC.noTileCollide = false;
