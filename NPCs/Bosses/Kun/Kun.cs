@@ -85,9 +85,9 @@ namespace FEI.NPCs.Bosses.Kun
             NPC.TargetClosest(true);
 
             //Consts
-            bool isJumping = false;
+            //bool isJumping = false;
             float chaseSpeed = 5f;
-            float maxJumpSpeed = -15;
+            //float maxJumpSpeed = -15;
             Player player = Main.player[NPC.target];
             Vector2 targetPosition = player.Center;
             float distance = Vector2.Distance(NPC.Center, targetPosition);
@@ -101,9 +101,9 @@ namespace FEI.NPCs.Bosses.Kun
                     Vector2 direction2Player = targetPosition - NPC.Center;
                     direction2Player.Normalize();
                     NPC.velocity = direction2Player * chaseSpeed;
-                    if (!NPC.collideY && !isJumping)
+                    if (!NPC.collideY)
                     {
-                        NPC.velocity.Y += 5f;
+                        NPC.velocity.Y += 4f;
                     }
                 }
                 else
@@ -115,21 +115,15 @@ namespace FEI.NPCs.Bosses.Kun
             // Jump 
             if (BossPhase == phaseID.Jumping)
             {
-                if (NPC.velocity.Y < maxJumpSpeed)
+                NPC.velocity.Y = -1f;
+                while (NPC.velocity.Y > -15f)
                 {
-                    NPC.velocity.Y = maxJumpSpeed;
-                }
-                else
-                {
-                    while (NPC.velocity.Y < maxJumpSpeed)
-                    {
-                        NPC.velocity.Y *= 1.1f;
-                    }
+                    NPC.velocity *= 1.3f;
                 }
             }
 
             //Updating
-            isJumping = false;
+            //isJumping = false;
             if (Timer % (5 * 60) == 0)
             {
                 BossPhase = phaseID.Jumping;

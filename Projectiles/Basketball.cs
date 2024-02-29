@@ -2,7 +2,6 @@
 using System;
 using Terraria;
 using Terraria.ModLoader;
-
 namespace FEI.Projectiles
 {
     public class Basketball : ModProjectile
