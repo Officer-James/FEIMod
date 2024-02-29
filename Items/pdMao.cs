@@ -20,8 +20,8 @@ namespace FEI.Items
             Item.useTurn = true;
             Item.useStyle = ItemUseStyleID.Thrust;
             Item.UseSound = SoundID.Item1;
-            Item.useTime = 45;
-            Item.useAnimation = 45;
+            Item.useTime = 60;
+            Item.useAnimation = 60;
             Item.knockBack = 6f;
             Item.crit = 30;
             Item.shoot = ModContent.ProjectileType<GemMao>();

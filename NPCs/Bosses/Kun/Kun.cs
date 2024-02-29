@@ -47,15 +47,6 @@ namespace FEI.NPCs.Bosses.Kun
                 SoundEngine.PlaySound(SoundID.Roar, NPC.Center);
             }
         }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (NPC.AnyNPCs(ModContent.NPCType<Kun>())) return 0f;
-            if (Main.dayTime)
-            {
-                return 0.1f;
-            }
-            return 0.05f;
-        }
         public override void FindFrame(int frameHeight)
         {
 
@@ -85,7 +76,7 @@ namespace FEI.NPCs.Bosses.Kun
             NPC.TargetClosest(true);
 
             //Consts
-            //bool isJumping = false;
+            bool isJumping = false;
             float chaseSpeed = 5f;
             //float maxJumpSpeed = -15;
             Player player = Main.player[NPC.target];
@@ -115,10 +106,17 @@ namespace FEI.NPCs.Bosses.Kun
             // Jump 
             if (BossPhase == phaseID.Jumping)
             {
+                isJumping = true;
                 NPC.velocity.Y = -1f;
-                while (NPC.velocity.Y > -15f)
+                while (NPC.velocity.Y > -200f)
                 {
-                    NPC.velocity *= 1.3f;
+                    NPC.velocity.Y += 100f;
+                }
+                var i = 1f;
+                while (!NPC.collideY)
+                {
+                    NPC.velocity.Y += 0.5f * 9.8f * i * i;
+                    i++;
                 }
             }
 
@@ -130,7 +128,10 @@ namespace FEI.NPCs.Bosses.Kun
             }
             else
             {
-                BossPhase = phaseID.Chasing;
+                if (!isJumping)
+                {
+                    BossPhase = phaseID.Chasing;
+                }
             }
         }
     }
