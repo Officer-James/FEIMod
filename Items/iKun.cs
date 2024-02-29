@@ -1,9 +1,6 @@
 ﻿using FEI.NPCs.Bosses.Kun;
-using Microsoft.CodeAnalysis;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
