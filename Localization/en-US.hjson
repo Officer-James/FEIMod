@@ -39,7 +39,12 @@ Mods: {
 
 			pdMao: {
 				DisplayName: Spear of Jewels
-				Tooltip: You fell the strength of jewels in your hand./n[c/FF1919:---Developer's Item---]
+				Tooltip:
+					'''
+					You fell the strength of jewels in your hand.
+					Projectiles can burn enemies up.
+					[c/FF1919:---Developer's Item---]
+					'''
 			}
 
 			pdShotGun: {

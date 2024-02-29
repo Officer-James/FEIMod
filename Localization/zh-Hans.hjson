@@ -42,6 +42,7 @@ Mods: {
 				Tooltip:
 					'''
 					使用时发射出3个追踪敌人的宝石弹幕
+					弹幕会点燃敌人
 					你感到手中充满了宝石的力量
 					[c/FF1919:---开发者物品---]
 					'''
@@ -61,7 +62,7 @@ Mods: {
 		Projectiles: {
 			GemMao.DisplayName: 宝石之矛
 			FireBullet.DisplayName: 火子弹
-			Basketball.DisplayName: 坤坤篮球
+			Basketball.DisplayName: 坤坤的神奇篮球
 		}
 
 		NPCs.Kun.DisplayName: 坤坤

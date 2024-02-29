@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
+using System;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -71,29 +72,71 @@ namespace FEI.NPCs.Bosses.Kun
                 NPC.ai[0] = value;
             }
         }
-        
+        public int spawnRandomTime(int startVar, int endVar)
+        {
+            Random rand = new Random();
+            return rand.Next(startVar, endVar);
+        }
+        enum phaseID {Chasing, Jumping};
         public override void AI()
         {
             //Refresh
             Timer++;
             NPC.TargetClosest(true);
+
+            //Consts
+            bool isJumping = false;
             float chaseSpeed = 5f;
+            float maxJumpSpeed = -15;
             Player player = Main.player[NPC.target];
             Vector2 targetPosition = player.Center;
             float distance = Vector2.Distance(NPC.Center, targetPosition);
-            if (distance < 1000f)
+            var BossPhase = phaseID.Chasing;
+            
+            //Chasing
+            if (BossPhase == phaseID.Chasing)
             {
-                Vector2 direction2Player = targetPosition - NPC.Center;
-                direction2Player.Normalize();
-                NPC.velocity = direction2Player * chaseSpeed;
-                if (!NPC.collideY)
+                if (distance < 1000f)
                 {
-                    NPC.velocity.Y += 0.5f;
+                    Vector2 direction2Player = targetPosition - NPC.Center;
+                    direction2Player.Normalize();
+                    NPC.velocity = direction2Player * chaseSpeed;
+                    if (!NPC.collideY && !isJumping)
+                    {
+                        NPC.velocity.Y += 5f;
+                    }
                 }
+                else
+                {
+                    NPC.velocity = Vector2.Zero;
+                }
+            }
+            
+            // Jump 
+            if (BossPhase == phaseID.Jumping)
+            {
+                if (NPC.velocity.Y < maxJumpSpeed)
+                {
+                    NPC.velocity.Y = maxJumpSpeed;
+                }
+                else
+                {
+                    while (NPC.velocity.Y < maxJumpSpeed)
+                    {
+                        NPC.velocity.Y *= 1.1f;
+                    }
+                }
+            }
+
+            //Updating
+            isJumping = false;
+            if (Timer % (5 * 60) == 0)
+            {
+                BossPhase = phaseID.Jumping;
             }
             else
             {
-                NPC.velocity = Vector2.Zero;
+                BossPhase = phaseID.Chasing;
             }
         }
     }

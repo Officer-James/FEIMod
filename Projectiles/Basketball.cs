@@ -1,13 +1,6 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
+﻿using Microsoft.Xna.Framework;
 using System;
-using System.Drawing.Text;
-using System.Security.Cryptography.X509Certificates;
 using Terraria;
-using Terraria.Audio;
-using Terraria.DataStructures;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace FEI.Projectiles
