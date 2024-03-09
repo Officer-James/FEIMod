@@ -27,6 +27,7 @@ namespace FEI.NPCs.Bosses.Kun
             NPC.knockBackResist = 0f;
             NPC.noGravity = false;
             AIType = -1;
+            base.SetDefaults();
         }
         public override void SetStaticDefaults()
         {
@@ -39,6 +40,7 @@ namespace FEI.NPCs.Bosses.Kun
                 BuffID.Burning
                 }
             };
+            base.SetStaticDefaults();
         }
         public override void OnKill()
         {
@@ -49,7 +51,6 @@ namespace FEI.NPCs.Bosses.Kun
         }
         public override void FindFrame(int frameHeight)
         {
-
             NPC.frame.Y = ((Timer / 15) % 5) * frameHeight;
         }
         public int Timer

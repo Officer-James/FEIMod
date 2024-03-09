@@ -22,6 +22,7 @@ namespace FEI.Projectiles
             Projectile.DamageType = DamageClass.Default;
             Projectile.scale = 1.5f;
             Projectile.knockBack = 6f;
+            base.SetDefaults();
         }
         public override void AI()
         {
@@ -51,6 +52,7 @@ namespace FEI.Projectiles
                 if (Math.Abs(Projectile.velocity.Y) > MaxSpeed)//如果纵向速度超越最大值，则回到最大值
                     Projectile.velocity.Y = MaxSpeed * Math.Sign(Projectile.velocity.Y);
             }
+            base.AI();
         }
     }
 }
