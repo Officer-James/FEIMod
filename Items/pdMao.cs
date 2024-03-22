@@ -14,7 +14,7 @@ namespace FEI.Items
         {
             Item.width = 64;
             Item.height = 64;
-            Item.damage = 50;
+            Item.damage = 25;
             Item.DamageType = DamageClass.Melee;
             Item.value = Item.sellPrice(0, 5, 50, 60);
             Item.useTurn = true;

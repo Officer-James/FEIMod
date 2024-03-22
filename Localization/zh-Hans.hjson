@@ -57,6 +57,16 @@ Mods: {
 				DisplayName: 我是iKun
 				Tooltip: 召唤我家鸽鸽
 			}
+
+			theWand: {
+				DisplayName: 法杖框架
+				Tooltip: 用于合成各种法杖
+			}
+
+			wandGold: {
+				DisplayName: 黄金之杖
+				Tooltip: 一把近战伤害的法杖
+			}
 		}
 
 		Projectiles: {

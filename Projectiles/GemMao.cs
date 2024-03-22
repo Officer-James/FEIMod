@@ -11,7 +11,7 @@ namespace FEI.Projectiles
         {
             Projectile.width = 32;
             Projectile.height = 32;
-            Projectile.damage = 15;
+            Projectile.damage = 10;
             Projectile.timeLeft = 150;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;

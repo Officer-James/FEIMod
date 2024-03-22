@@ -56,6 +56,16 @@ Mods: {
 				DisplayName: iKun
 				Tooltip: Summon KunKun(AKA XuKun Cai)
 			}
+
+			theWand: {
+				DisplayName: Frame of Wands
+				Tooltip: Use it to create various wands.
+			}
+
+			wandGold: {
+				DisplayName: Wand of Gold
+				Tooltip: A wand, but melee damage.
+			}
 		}
 
 		Projectiles: {
